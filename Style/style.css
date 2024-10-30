@@ -25,49 +25,46 @@ body header nav ul {
     text-align: center;
 }
 
-.caja-titulo { 
+.caja-titulo {
     display: flex;
-    justify-content:center; }
+    justify-content: center;
+}
 
 .logo {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
+    display: block;
 }
 
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
-    display: none; /* Ocultar en desktop */
+    display: none;
+    /* Ocultar en desktop */
 }
-
+.contenedor-lab {
+    display: flex; flex-direction: column;align-items: center;
+}
 .contenedor-flex {
     display: flex;
+    justify-content: space-evenly;
+}
+
+.correcion-caja {
+    padding-left: 170px;
+}
+
+.caja-grande-lab {
+    display: flex; 
     justify-content: center;
-}
-
-.one-caja {
-    width: 400px;
-    /* Ancho de la caja */
-    height: 350px;
-    /* Alto de la caja */
-    background-color: #ed101000;
-    /* Color de fondo */
-    padding: 20px;
-    /* Espacio interior */
-    margin-top: 30px;
-    /* Márgen superior */
-    margin-left: 240px;
-    /* Márgen izquierdo  */
 
 }
-
-.flex-box-laboratorios {
-    display: flex;
-    justify-content: space-around;
+.caja-padd { 
+    padding: 10px 10px 10px 10px;
 }
-
 .flex-box {
     display: flex;
+    justify-content: space-evenly;
 }
 
 #footer {
@@ -79,7 +76,7 @@ body header nav ul {
 }
 
 .nav {
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 
@@ -96,28 +93,74 @@ body header nav ul {
 
 @media (max-width: 768px) {
     .menu-icon {
-        display: block; /* Mostrar en mobile */
+        display: block;
+        /* Mostrar en mobile */
+    }
+
+    .logo {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 15px;
+        display: none;
     }
 
     .nav {
-        display: none; /* Ocultar el menú por defecto */
+        display: none;
+        /* Ocultar el menú por defecto */
         flex-direction: row;
-        top: 60px; /* Posicionar debajo del header */
+        top: 60px;
+        /* Posicionar debajo del header */
         left: 0;
         right: 0;
         background-color: #b4b4b400;
     }
 
     .nav.active {
-        display: flex; /* Mostrar cuando está activo */
+        display: flex;
+        /* Mostrar cuando está activo */
     }
 
     .nav ul {
         width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .nav ul li {
         margin: 10px 0;
     }
+
+    .contenedor-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .flex-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .caja-grande-lab {
+        display: flex; 
+        flex-direction: column !important;
+    
+    
+    }
 }
+
+
+
+.caja {
+    width: 500px;
+    /* Ancho fijo */
+
+    text-overflow: ellipsis;
+    /* Agrega "..." si es necesario (solo si se usa con nowrap) */
+
+}
+
+.footer { display: block;}
