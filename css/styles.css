@@ -1,3 +1,151 @@
+body {
+  background-color: #c6ecff;
+}
 
+h1 {
+  text-align: center;
+  color: #1b5583;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 26px;
+}
+
+#footer {
+  text-align: center;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.enlaces {
+  text-align: center;
+}
+
+.caja-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subrayado-titulo {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+  display: block;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.contenedor-lab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.correcion-caja {
+  padding-left: 170px;
+}
+
+.caja-grande-lab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja-padd {
+  padding: 10px;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.formulario {
+  display: block;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav ul li {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+  .nav {
+    display: none;
+    flex-direction: row;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: rgba(180, 180, 180, 0);
+  }
+  .nav.active {
+    display: flex;
+  }
+  .nav ul {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav ul li {
+    margin: 10px 0;
+  }
+  .contenedor-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .flex-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .caja-grande-lab {
+    display: flex;
+    flex-direction: column;
+    display: flex !important;
+  }
+}
+.caja {
+  width: 500px;
+  text-overflow: ellipsis;
+}
 
 /*# sourceMappingURL=styles.css.map */

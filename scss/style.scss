@@ -1,0 +1,194 @@
+// _variables.scss
+$primary-color: #c6ecff;
+$secondary-color: #1b5583;
+$menu-color: #b4b4b400;
+$logo-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$heading-font-family: 'Times New Roman', Times, serif;
+$font-size-h1: 26px;
+$font-size-logo: 15px;
+$max-width-mobile: 768px;
+$button-padding: 10px;
+$footer-text-align: center;
+$flex-center: center;
+$flex-space-evenly: space-evenly;
+
+// _mixins.scss
+@mixin flex-center {
+    display: flex;
+    justify-content: $flex-center;
+    align-items: $flex-center;
+}
+
+@mixin flex-space-evenly {
+    display: flex;
+    justify-content: $flex-space-evenly;
+}
+
+@mixin hide-desktop {
+    display: none;
+}
+
+@mixin hide-mobile {
+    display: block;
+}
+
+@mixin flex-direction-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// _base.scss
+body {
+    background-color: $primary-color;
+}
+
+h1 {
+    text-align: center;
+    color: $secondary-color;
+    font-family: $heading-font-family;
+    font-size: $font-size-h1;
+}
+
+#footer {
+    text-align: $footer-text-align;
+}
+
+
+// _header.scss
+header {
+    nav {
+        ul {
+            @include flex-space-evenly;
+            list-style-type: none;
+        }
+    }
+}
+
+// _classes.scss
+.enlaces {
+    text-align: center;
+}
+
+.caja-titulo {
+    @include flex-center;
+}
+
+.subrayado-titulo {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    @include flex-center
+}
+
+.logo {
+    font-family: $logo-font-family;
+    font-size: $font-size-logo;
+    display: block;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    @include hide-desktop;
+}
+
+.contenedor-lab {
+    @include flex-direction-column;
+    align-items: center;
+}
+
+.contenedor-flex {
+    @include flex-space-evenly;
+}
+
+.correcion-caja {
+    padding-left: 170px;
+}
+
+.caja-grande-lab {
+    @include flex-center;
+}
+
+.caja-padd {
+    padding: $button-padding;
+}
+
+.flex-box {
+    @include flex-space-evenly;
+}
+
+.formulario {
+    display: block;
+}
+
+.nav {
+    @include flex-center;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li {
+        margin: 0 10px;
+    }
+}
+
+// _media-queries.scss
+@media (max-width: $max-width-mobile) {
+    .menu-icon {
+        @include hide-mobile;
+    }
+
+    .logo {
+        @include hide-desktop;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: row;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: $menu-color;
+
+        &.active {
+            display: flex;
+        }
+
+        ul {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                margin: 10px 0;
+            }
+        }
+    }
+
+    .contenedor-flex {
+        @include flex-direction-column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .flex-box {
+        @include flex-direction-column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .caja-grande-lab {
+        @include flex-direction-column;
+        display: flex !important;
+    }
+}
+
+// _caja.scss
+.caja {
+    width: 500px;
+    text-overflow: ellipsis;
+}
